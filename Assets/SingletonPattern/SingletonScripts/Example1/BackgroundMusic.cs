@@ -15,7 +15,7 @@ public class BackgroundMusic : MonoBehaviour
         else
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject); // It is up to you whether to write this code or not. This code is used to ensure that the game object is not destroyed during scene transitions.
+            DontDestroyOnLoad(this.gameObject);
         }
     }
 }
