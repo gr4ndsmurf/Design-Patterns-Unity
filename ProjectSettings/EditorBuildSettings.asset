@@ -12,6 +12,21 @@ EditorBuildSettings:
     path: Assets/1-CreationalPatterns/CreationalPatterns_Scene.unity
     guid: 85b56a90c4975144c84a4112708c1162
   - enabled: 1
+    path: Assets/1-CreationalPatterns/SingletonPattern/Singleton_Example1_Scene.unity
+    guid: ab4a2fc03e750c04c992d0fc4e1ca56d
+  - enabled: 1
+    path: Assets/1-CreationalPatterns/SingletonPattern/Singleton_Example2_Scene.unity
+    guid: 54cead5fe0efc91438253d7f3d424e5c
+  - enabled: 1
+    path: Assets/1-CreationalPatterns/ObjectPoolingPattern/ObjectPoolingScene.unity
+    guid: d4bd0bbc3940c704aa2a9a0496b64c3b
+  - enabled: 1
+    path: Assets/1-CreationalPatterns/FactoryPattern/FactoryScene.unity
+    guid: c90d06595c824fe4f90e1b27e9190ce9
+  - enabled: 1
+    path: Assets/1-CreationalPatterns/BuilderPattern/BuilderScene.unity
+    guid: 6fcb8d2abb267b847b73ef46555765a0
+  - enabled: 1
     path: Assets/2-StructuralPatterns/StructuralPatterns_Scene.unity
     guid: ac4c2399a5b161e4f932e11d737fc254
   - enabled: 1
