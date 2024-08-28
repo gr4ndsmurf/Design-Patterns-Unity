@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/1-CreationalPatterns/ObjectPoolingPattern/ObjectPoolingScene.unity
     guid: d4bd0bbc3940c704aa2a9a0496b64c3b
   - enabled: 1
-    path: Assets/1-CreationalPatterns/FactoryPattern/FactoryScene.unity
+    path: Assets/1-CreationalPatterns/FactoryPattern/Factory_Example1_Scene.unity
     guid: c90d06595c824fe4f90e1b27e9190ce9
   - enabled: 1
     path: Assets/1-CreationalPatterns/BuilderPattern/BuilderScene.unity
