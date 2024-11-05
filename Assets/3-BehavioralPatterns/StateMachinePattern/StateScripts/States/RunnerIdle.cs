@@ -14,7 +14,7 @@ public class RunnerIdle : RunnerState
             return walk;
         }
 
-        controller.rb.velocity = new Vector2(0f, controller.rb.velocity.y);
+        controller.rb.linearVelocity = new Vector2(0f, controller.rb.linearVelocity.y);
         return this;
     }
 }

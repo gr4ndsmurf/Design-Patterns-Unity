@@ -20,7 +20,7 @@ public class RunnerWalk : RunnerState
             return run;
         }
 
-        controller.rb.velocity = new Vector2(1f * controller.speed * Time.deltaTime, controller.rb.velocity.y);
+        controller.rb.linearVelocity = new Vector2(1f * controller.speed * Time.deltaTime, controller.rb.linearVelocity.y);
 
         return this;
     }

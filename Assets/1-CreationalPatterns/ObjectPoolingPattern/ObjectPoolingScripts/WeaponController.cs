@@ -49,13 +49,13 @@ public class WeaponController : MonoBehaviour
 
             if (bullet != null)
             {
-                //Pool boþ deðilse
+                //Pool boï¿½ deï¿½ilse
                 bullet.transform.position = firePointTransform.position;
                 bullet.transform.rotation = firePointTransform.rotation;
                 bullet.SetActive(true);
 
                 Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
-                bulletRigidbody.velocity = new Vector2(shootDirection.x, shootDirection.y).normalized * bulletSpeed * Time.deltaTime;
+                bulletRigidbody.linearVelocity = new Vector2(shootDirection.x, shootDirection.y).normalized * bulletSpeed * Time.deltaTime;
 
                 StartCoroutine(DisableBulletAfterDelay(bullet, 2f));
             }
