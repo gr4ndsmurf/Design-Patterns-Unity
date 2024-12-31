@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class Bow : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private Animator bowAnimator;
+
+    //Subscribe to the event
+    private void Start() 
     {
-        
+        MainGemController.OnMainGemClicked += MainGemController_OnMainGemClicked;    
     }
 
-    // Update is called once per frame
-    void Update()
+    //Play an animation and create a particle when the event is triggered
+    private void MainGemController_OnMainGemClicked()
     {
-        
+        bowAnimator.SetTrigger("GemClicked");
+        // TODO: AUDIO OR PARTICLE
     }
 }

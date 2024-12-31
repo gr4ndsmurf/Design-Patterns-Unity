@@ -1,16 +1,14 @@
 using UnityEngine;
 
-public class GemTypeSO : MonoBehaviour
+[CreateAssetMenu(fileName = "Gems", menuName = "Gems/New Gem")]
+public class GemTypeSO : ScriptableObject
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public int value;
+    public GemType type;
+}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public enum GemType{
+    GalvanicArrow,
+    ColdDamage,
+    FireDamage
 }

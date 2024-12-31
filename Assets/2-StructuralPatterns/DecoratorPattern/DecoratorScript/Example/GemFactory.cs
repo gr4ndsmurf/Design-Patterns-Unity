@@ -1,16 +1,13 @@
-using UnityEngine;
-
-public class GemFactory : MonoBehaviour
+//Static class for creating gem by their type
+public static class GemFactory
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static IGem CreateGem (GemTypeSO gemType)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return gemType.type switch
+        {
+            GemType.FireDamage => new FireDamageDecorator(gemType.value),
+            GemType.ColdDamage => new ColdDamageDecorator(gemType.value),
+            _ => new GalvanicArrowGem(gemType.value)
+        };
     }
 }

@@ -1,16 +1,28 @@
 using UnityEngine;
 
-public class GemManager : MonoBehaviour
+// Managing gem functionalities
+public class GemManager : SingletonDestroyMono<GemManager>
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public SupportGemController SelectedSupportGem;
 
-    // Update is called once per frame
-    void Update()
+    //Decorate the gem
+    public void Decorate(SupportGemController clickedSupportGem)
     {
+        if(SelectedSupportGem == clickedSupportGem) { return; }
         
+        // Check if the selected gem is already a decorator
+        if(SelectedSupportGem.Gem is GemDecorator decorator)
+        {
+            Debug.Log("Decorating Gems...");
+            decorator.Decorate(clickedSupportGem.Gem);
+            clickedSupportGem.Gem = decorator;
+
+            SelectedSupportGem.MoveTo(clickedSupportGem.rectTransform.anchoredPosition);
+            // TODO: AUDIO OR SOME VISUAL EFFECTS
+        }
+        else
+        {
+            Debug.LogWarning("Can't Decorate Gems!");
+        }
     }
 }

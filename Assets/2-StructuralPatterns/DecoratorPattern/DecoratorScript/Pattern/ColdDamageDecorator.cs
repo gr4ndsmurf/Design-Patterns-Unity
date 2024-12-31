@@ -1,16 +1,20 @@
 using UnityEngine;
 
-public class ColdDamageDecorator : MonoBehaviour
+public class ColdDamageDecorator : GemDecorator
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public ColdDamageDecorator(int value) : base(value) {}
+    
+    //Use the decorated gem using the "null-coalescing" operator
+    public override int UseGem()
     {
-        
+        Debug.Log("Using ColdDamageDecorator Gem with value: " + value);
+        DamageBuff();
+        return gem?.UseGem() ?? 0; 
     }
 
-    // Update is called once per frame
-    void Update()
+    //TODO LATER
+    private void DamageBuff()
     {
-        
+        // DAMAGE BUFF
     }
 }
